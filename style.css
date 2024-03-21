@@ -1,0 +1,197 @@
+
+/*background wallpaper*/
+body{background-image: url('Images/Background_Element.png');}
+
+/*remove link underline*/
+a {text-decoration: none;
+}
+
+/*hamburger menu*/
+.menu-container {
+    position: relative;
+    z-index: 2;
+}
+
+
+.menu-icon {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    position: absolute;
+    top: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.bar {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    transition: transform 0.3s ease;
+}
+
+.menu-list {
+    display: none;
+    position: absolute;
+    top: 50px; /* Adjust as needed */
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    list-style-type: none;
+}
+
+.menu-list li {
+    margin-bottom: 10px;
+}
+
+.menu-list a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Show menu list when menu icon is clicked */
+.menu-icon.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-icon.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.menu-icon.active ~ .menu-list {
+    display: block;
+}
+
+/*text fonts and colours*/
+h1 {color: black;
+    font-family: "Rampart One"
+}
+
+h3 {color: black;
+font-family: "Rampart One"
+}
+
+p {color: black;
+    font-family: "Playpen Sans"
+}
+
+/*HOMEPAGE*/
+
+/*position image elements*/
+
+.container {
+    position: relative;
+    top: -10px;
+    text-align: center;
+    color: white;}
+
+    .centered {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      
+#table {
+    position: absolute;
+    top: 250px;
+    right: 0px;
+    width: 90vw;
+    z-index: 0;
+}
+
+#cat {
+    position: absolute;
+top: 230px;
+right: 0px;}
+
+.image-row {
+    display: flex;
+    justify-content: space-between; 
+position: absolute;
+top: 310px;
+left: 30vw;
+z-index: 1;}
+
+.custom-positioned-text {
+    position: absolute;
+    top: 38vh;
+    left: 18vw;
+    transform: translate(-50%, -50%);
+  }
+
+
+/*PAGE 1*/
+
+/*Gallery*/
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 20px;
+}
+
+.video-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%; /* 16:9 aspect ratio for videos */
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #73B272;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+  .btn:hover {
+    background-color: #4C844B;
+  }
+
+
+  /*PAGE 3*/
+
+  .gallery3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+    margin: 20px;
+}
+
+.image {
+    position: relative;
+    overflow: hidden;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.image:hover img {
+    transform: scale(1.1);
+}
