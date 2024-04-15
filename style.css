@@ -72,22 +72,52 @@ a {text-decoration: none;
 
 /*text fonts and colours*/
 h1 {color: black;
-    font-family: "Rampart One"
+    font-family: "catseye", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    
 }
 
 h3 {color: black;
-font-family: "Rampart One"
+font-family: "Rampart One";
 }
 
 p {color: black;
     font-family: "Playpen Sans"
 }
 
+ul  {color: black;
+    font-family: "Playpen Sans"
+}
+
+li  {color: black;
+    font-family: "Playpen Sans"
+}
+
+
+/*Custom Cursor*/
+
+body {
+    cursor: url('Images/Image\ 1.jpg'), auto; 
+ }
+ 
+ .custom-cursor {
+    /* display: none; Hide the custom cursor initially */
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('Images/Image\ 1.jpg'); 
+    background-size: cover; /* Scale the image to cover the element */
+    z-index: 9999; 
+ }
+
 /*HOMEPAGE*/
 
 /*position image elements*/
 
-.container {
+.titlecontainer {
     position: relative;
     top: -10px;
     text-align: center;
@@ -95,7 +125,7 @@ p {color: black;
 
     .centered {
         position: absolute;
-        top: 30%;
+        top: 30%;  
         left: 50%;
         transform: translate(-50%, -50%);
       }
@@ -119,7 +149,7 @@ right: 0px;}
     justify-content: space-between; 
 position: absolute;
 top: 310px;
-left: 30vw;
+left: 20vw;
 z-index: 1;}
 
 .custom-positioned-text {
@@ -131,6 +161,43 @@ z-index: 1;}
 
 
 /*PAGE 1*/
+
+/*Top Corner Icon*/
+.catcontainer {
+    position: relative; /* Ensure positioning context for absolute positioning */
+    display: inline-block; /* Make the container fit its contents */
+}
+
+.circle {
+    position: absolute;
+    top: 35px;
+    left: 45px;
+    width: 100px; /* Adjust size of the circle */
+    height: 100px;
+    background-color: #fff; /* White background */
+    border-radius: 50%; /* Make it a circle with border-radius */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Hide overflow to ensure the image fits inside the circle */
+    z-index: -1; /* Move the circle behind the icon */
+}
+
+#weekcat {
+    position: relative; /* Ensure icon remains above the circle */
+    z-index: 1; /* Ensure icon is above the circle */
+}
+
+/*Centered Title & Other Font Adjustments*/
+.centeredtitle {
+    text-align: center; /* Center align the text */
+    margin-top: 50px; /* Optional: Add margin for spacing */
+    font-size: 50px;
+}
+
+#weeknumberheading {
+    font-size: 30px;
+}
 
 /*Gallery*/
 .gallery {
@@ -155,21 +222,49 @@ z-index: 1;}
     object-fit: cover;
 }
 
+/*button*/
 .btn {
+    position: absolute;
+    left: 45vw;
     display: inline-block;
     padding: 10px 20px;
     background-color: #73B272;
     color: #fff;
     font-size: 16px;
+    font-family:"Playpen Sans"; 
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    
 }
   
   .btn:hover {
     background-color: #4C844B;
   }
+
+  /*White Column*/
+  body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Use min-height to allow growth */
+}
+
+.centered-column {
+    width: 200%; /* Allow the column to expand horizontally */
+    max-width: 70vw; /* Set a maximum width to prevent it from growing too wide */
+    padding: 20px;
+    background-color: #fff; /* White background */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a box shadow for visual effect */
+}
+
 
 
   /*PAGE 3*/
@@ -194,4 +289,45 @@ z-index: 1;}
 
 .image:hover img {
     transform: scale(1.1);
+}
+
+.column {
+    float: left;
+    width: 50%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .white-bar {
+    background-color: #ffffff; /* White background color */
+    color: #000000; /* Black text color */
+    padding: 10px; /* Adjust padding as needed */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+ }
+ 
+ .content {
+    padding: 20px; /* Add padding to separate content from the white bar */
+ }
+
+
+/*PAGE 5*/
+/* Styles for the resizable box */
+.resizable-box {
+    width: 80%; /* Adjust width as needed */
+    height: 400px; /* Initial height of the box */
+    border: 1px solid #ccc;
+    resize: both; /* Allow resizing */
+    overflow: auto; /* Add scrollbar when content overflows */
+    margin: 20px auto; /* Center the box horizontally */
+}
+
+/* Style for the p5 sketch container */
+#p5-container {
+    width: 100%;
+    height: 100%;
 }
