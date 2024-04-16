@@ -21,7 +21,7 @@ function draw() {
   let circlewidth=random(4,30);
   //if (mouseIsPressed){
     //image(capture, width/2, height/2, width, height);
-  let c=img2.get(rx,ry);
+  let c=img.get(rx,ry);
   fill(c);
   noStroke();
   circle(rx,ry, circlewidth);
