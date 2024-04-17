@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Interactive Media Project</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <!--External Font Families-->
+    <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&family=Rampart+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/kln5fyu.css">
+
+    </head>
+  
+    <body>
+        
+    <!--UI-->
+
+    <div class="menu-container">
+        <div class="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul class="menu-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Interactive Media Project (Page 2).html">Week 1</a></li>
+            <li><a href="Interactive Media Project (Page 3).html">Week 2</a></li>
+            <li><a href="Interactive Media Project (Page 4).html">Week 3</a></li>
+            <li><a href="Interactive Media Project (Page 5).html">Week 4</a></li>
+            <li><a href="Interactive Media Project (Page 6).html">Week 5</a></li>
+            <li><a href="Interactive Media Project (Page 7).html">Week 6</a></li>
+            <li><a href="Interactive Media Project (Page 8).html">Research Journal</a></li>
+        </ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('.menu-icon').click(function() {
+            $(this).toggleClass('active');
+        });
+    });
+</script>
+
+    <!--Title-->
+
+    <div class="catcontainer">
+        <div class="circle">
+            <a href="#" onclick="playSound(); return false;">
+                <img id="weekcat" src="Images/Cat_Element.PNG" height="100" title="meeoowww">
+            </a>
+        </div>
+        <audio id="clickSound">
+            <source src="Images/SFX_Cat_Meow.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    <script>
+        function playSound() {
+            var clickSound = document.getElementById("clickSound");
+            clickSound.play();
+        }
+    </script>
+
+        <a href="index.html" target=_self>
+            <h1 class="centeredtitle">Interactive Media</h1> </a>
+
+            <br>
+            <br>
+
+
+
+    <!--Body-->
+
+    <div class="container">
+        <div class="centered-column">
+
+    <h3 id="weeknumberheading">Week Four</h3>
+    <br>
+    <p> <h3>Offline Algorithmic Thinking</h3> </p>
+    <p>Generative art refers to any art practice where the artist creates a process such as a set of natural language rules, a computer program, a machine, or other procedural invention, which is then set into motion with some degree of autonomy contributing to or resulting in a completed work of art.
+    <br> List of Artists to keep in mind:   
+    <ul>
+            <li>Yoko Ono: audience participation</li>
+            <li>Maurizio Cattelan e.g. fallen pope</li>
+            <li>Sol Lewitt e.g. font</li>
+            <li>Piet Mondrian</li>
+            <li>Lauren McCarthy</li>
+
+     </ul>
+
+    <p>For this exercise, we covered the concept of enacting out one day of our lives according to the chance of a coin or dice. 
+    I created my parameters according to the flip of a coin. These are the parameters I set up and came out with for the 14th of April (Sunday):
+
+    <ul>
+        <li>1. Wake up at 7am (H) or at 9am (T)? <br>Heads: groggily crawled out of bed and regretting my life decision to be a night owl. </li>
+        <li>2. Get up and eat breakfast (H) or scroll for a while on social media (T)? <br>Heads: time to be productive!</li>
+        <li>3. Eat noodles (H) or eat the leftover woolies scones (T)? <br>Heads: I prefer having a larger, savoury brekkie!</li>
+        <li>4. Do some gaming (H) or drawing for a bit (T)? <br>Tails: have to keep ontop of the content grind.</li>
+        <li>5. Eating lunch - do I scour my empty fridge looking for what I can make (H), or go out and buy something (T)? <br>Heads: (Again??) made a very strange tunamayo sandwich.</li>   
+        <li>6. Time to study, and catch up on assignments. Do I stay at home (H) or go to the library (T) to study? <br>Tails: Better concentration is the way to go! </li>
+
+    </ul>  
+
+    <p>Admittedly towards the later part of the evening after coming back from Parkville, I may have mostly given up the motivation to really carry out the idea. </p>
+
+    </p>
+        
+
+    <p> <h3>Let's Go!!</h3> </p>
+
+    <p>
+    "p5. js is a JavaScript library for creative coding. A collection of pre-written code, it provides us with tools that simplify the process of creating interactive visuals with code in the web browser." - Codecademy
+    Developed in 2013 by Lauren McCarthy    
+    <br> Beginning to learn how to code in P5, to make a responsive, full screen sketch and add shapes, colours, and text.
+    </p>
+
+    <p> Work in progress screenshot:</p>
+
+    <img src="Images/6_Draft.png" height="400" title="Let's Go!!"></a>
+
+    <p>Final product: was a good way to warm up and get into the intricacies of P5.</p>
+
+    <iframe src="P5 Sketch 1.html" width="600" height="400"></iframe>
+
+    <br>
+    <br>
+    <p><h3>Personal Notes & Takeaways:</h3></p>
+    <ul>
+        <li>Homework: create image of a face</li>
+        <li>Enact out the coin toss for next week</li>
+        <li>Idea for P5 face - use dot-to-dot drawing?</li>
+        <li>Begin thinking about what I want to add to the website for Brief II</li>
+        <li>Definitely want the icons on the home page to be more interactable</li>
+        <li>Give the navigation a "back" button</li>
+        <li>Feed the cat?</li>
+
+    </ul>
+
+    <br>
+    <br>
+
+
+
+</div>
+</div>
+
+<br>
+<br>
+<br>
+
+<a href="Interactive Media Project (Page 4).html">
+    <button class="lbtn">< Last Week</button> </a>
+
+<a href="Interactive Media Project (Page 6).html">
+    <button class="rbtn">Next Week ></button> </a>
+
+<br>
+<br>       
+<br>
+<br>
+<br>
+
+</body>
+</html>   
+
