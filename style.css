@@ -9,7 +9,7 @@ a {text-decoration: none;
 /*hamburger menu*/
 .menu-container {
     position: relative;
-    z-index: 2;
+    z-index: 40;
 }
 
 
@@ -98,14 +98,15 @@ li  {color: black;
 /*Custom Cursor*/
 
 * {
-    cursor:url("Images/Custom\ Cursor.PNG"), auto;
+    cursor:url("Images/Custom_Cursor.PNG"), auto;
     }
 
+    
 /*HOMEPAGE*/
 
 /*kibble element*/
 
-.theDiv {    
+.kibble {    
     position: absolute;
     top: 5px;
     left: 20vw;
@@ -149,7 +150,8 @@ li  {color: black;
 #cat {
     position: absolute;
 top: 230px;
-right: 0px;}
+right: 0px;
+z-index: 20}
 
 .image-row {
     display: flex;
@@ -159,13 +161,43 @@ top: 310px;
 left: 10vw;
 z-index: 1;}
 
+.subheading{
+    position: absolute;
+    top: 15vh;
+    left: 50vw;
+    font-size: 20px;
+    transform: translate(-50%, -50%);
+  }
+
+
 .custom-positioned-text {
     position: absolute;
-    top: 38vh;
+    top: 35vh;
     left: 18vw;
     transform: translate(-50%, -50%);
   }
 
+.custom-positioned-text-2 {
+    position: absolute;
+    top: 10vh;
+    left: 20vh;
+    font-size: 12px;
+    transform: translate(-50%, -50%);
+  }
+
+.custom-positioned-text-3 {
+    position: absolute;
+    top: 75vh;
+    left: 45vw;
+    transform: translate(-50%, -50%);
+  }
+
+.custom-positioned-text-4 {
+    position: absolute;
+    top: 39vh;
+    left: 92vw;
+    transform: translate(-50%, -50%);
+  }
 
 /*PAGE 1*/
 
@@ -230,9 +262,9 @@ z-index: 1;}
 }
 
 /*button*/
-.btn {
+.rbtn {
     position: absolute;
-    left: 45vw;
+    left: 72vw;
     display: inline-block;
     padding: 10px 20px;
     background-color: #73B272;
@@ -246,7 +278,24 @@ z-index: 1;}
     
 }
   
-  .btn:hover {
+
+  .lbtn {
+    position: absolute;
+    left: 15vw;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #73B272;
+    color: #fff;
+    font-size: 16px;
+    font-family:"Playpen Sans"; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+}
+
+.btn:hover {
     background-color: #4C844B;
   }
 
