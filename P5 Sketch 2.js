@@ -2,7 +2,7 @@
 
 var img, capture;
 function preload (){
-img=loadImage("Images/Cat_Element.png");
+img=loadImage("Images/Cat_Element.PNG");
 }
 
 function setup() {
