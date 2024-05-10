@@ -77,232 +77,84 @@
 <div class="image-row">
 
 <!--WEEK 1-->
-<img id="Week_1" src="Images/WK1_Icon.PNG" height="100" onclick="playSound('ripping', changeImage('Week_1', 'Images/WK1_Icon_Broken.PNG'))" ondblclick="openLink('Interactive Media Project (Page 2).html')">
+<img id="Week_1" src="Images/WK1_Icon.PNG" height="100" onclick="playSound('ripping'), changeImage('Week_1', 'Images/WK1_Icon_Broken.PNG')" ondblclick="openLink('Interactive Media Project (Page 2).html')">
 
 <audio id="ripping">
     <source src="Images/SFX_Ripping.mp3" type="audio/mp3">
     Your browser does not support the audio element.
 </audio>
 
-    <script> 
 
-function playSound(soundFile, action)  {
-        var clickSound = document.getElementById(soundFile);
-            clickSound.play();
-            if (typeof action === 'function') {
-                action('Week_1, brokenImageFile');
-            }
-        }
-
-        function changeImage(imageFile, brokenImageFile){
-                let displayImage = document.getElementById(imageFile);
-                    if(displayImage.src.match(imageFile)){
-                    displayImage.src = brokenImageFile;
-                    displayImage.onclick = null;
-                            
-                    }
-                }
-
-        function openLink(url) {
-        window.open(url, "_self");
-    }
-    </script>
-
-
-    <!--WEEK 2-->
-    <img id="Week_2" src="Images/WK2_Icon.PNG" height="100" onclick="playSound('shattering', changeImage('Week_2', 'Images/WK2_Icon_Broken.PNG'))" ondblclick="openLink('Interactive Media Project (Page 3).html')">
-
-    <audio id="shattering">
-        <source src="Images/SFX_Glass_Shatter.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-    </audio>
-    
-        <script> 
-    
-    function playSound(soundFile, action)  {
-            var clickSound = document.getElementById(soundFile);
-                clickSound.play();
-                if (typeof action === 'function') {
-                    action('Week_2, brokenImageFile');
-                }
-            }
-    
-            function changeImage(imageFile, brokenImageFile){
-                let displayImage = document.getElementById(imageFile);
-                    if(displayImage.src.match(imageFile)){
-                    displayImage.src = brokenImageFile;
-                    displayImage.onclick = null;
-                            
-                    }
-                }
-    
-            function openLink(url) {
-            window.open(url, "_self");
-        }
-        </script>
-
-
-        <!--WEEK 3-->
-        <img id="Week_3" src="Images/WK3_Icon.PNG" height="100" onclick="playSound('shattering', changeImage('Week_3', 'Images/WK3_Icon_Broken.PNG'))" ondblclick="openLink('Interactive Media Project (Page 4).html')">
-
-        <audio id="shattering">
-            <source src="Images/SFX_Glass_Shatter.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
-        </audio>
-        
-            <script> 
-        
-        function playSound(soundFile, action)  {
-                var clickSound = document.getElementById(soundFile);
-                    clickSound.play();
-                    if (typeof action === 'function') {
-                        action('Week_3, brokenImageFile');
-                    }
-                }
-        
-        function changeImage(imageFile, brokenImageFile){
-                let displayImage = document.getElementById(imageFile);
-                    if(displayImage.src.match(imageFile)){
-                    displayImage.src = brokenImageFile;
-                    displayImage.onclick = null;
-                            
-                    }
-                }
-        
-                function openLink(url) {
-                window.open(url, "_self");
-            }
-            </script>
-
-
-<!--WEEK 4-->
-<img id="Week_4" src="Images/WK4_Icon.PNG" height="100" onclick="playSound('shattering', changeImage('Week_4', 'Images/WK4_Icon_Broken.PNG'))" ondblclick="openLink('Interactive Media Project (Page 5).html')">
+<!--WEEK 2-->
+<img id="Week_2" src="Images/WK2_Icon.PNG" height="100" onclick="playSound('shattering', 'Week_2', 'Images/WK2_Icon_Broken.PNG')" ondblclick="openLink('Interactive Media Project (Page 3).html')">
 
 <audio id="shattering">
     <source src="Images/SFX_Glass_Shatter.mp3" type="audio/mp3">
     Your browser does not support the audio element.
 </audio>
 
-    <script> 
 
-function playSound(soundFile, action)  {
-        var clickSound = document.getElementById(soundFile);
-            clickSound.play();
-            if (typeof action === 'function') {
-                action('Week_4, brokenImageFile');
-            }
-        }
+<!--WEEK 3-->
+<img id="Week_3" src="Images/WK3_Icon.PNG" height="100" onclick="playSound('shattering'), changeImage('Week_3', 'Images/WK3_Icon_Broken.PNG')" ondblclick="openLink('Interactive Media Project (Page 4).html')">
 
-function changeImage(imageFile, brokenImageFile){
-        let displayImage = document.getElementById(imageFile);
-            if(displayImage.src.match(imageFile)){
-            displayImage.src = brokenImageFile;
-            displayImage.onclick = null;
-                    
-            }
-        }
+<audio id="shattering">
+    <source src="Images/SFX_Glass_Shatter.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
+        
 
-        function openLink(url) {
-        window.open(url, "_self");
-    }
-    </script>
+<!--WEEK 4-->
+<img id="Week_4" src="Images/WK4_Icon.PNG" height="100" onclick="playSound('shattering'), changeImage('Week_4', 'Images/WK4_Icon_Broken.PNG')" ondblclick="openLink('Interactive Media Project (Page 5).html')">
+
+<audio id="shattering">
+    <source src="Images/SFX_Glass_Shatter.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
+
 
 <!--WEEK 5-->
-<img id="Week_5" src="Images/WK5_Icon.PNG" height="120" onclick="playSound('eating', changeImage('Week_5', 'Images/WK5_Icon_Broken.PNG'))" ondblclick="openLink('Interactive Media Project (Page 6).html')">
+<img id="Week_5" src="Images/WK5_Icon.PNG" height="120" onclick="playSound('eating'), changeImage('Week_5', 'Images/WK5_Icon_Broken.PNG')" ondblclick="openLink('Interactive Media Project (Page 6).html')">
 
 <audio id="eating">
     <source src="Images/SFX_Cat_Eats.mp3" type="audio/mp3">
     Your browser does not support the audio element.
 </audio>
 
-    <script> 
-
-function playSound(soundFile, action)  {
-        var clickSound = document.getElementById(soundFile);
-            clickSound.play();
-            if (typeof action === 'function') {
-                action('Week_5, brokenImageFile');
-            }
-        }
-
-        function changeImage(imageFile, brokenImageFile){
-                let displayImage = document.getElementById(imageFile);
-                    if(displayImage.src.match(imageFile)){
-                    displayImage.src = brokenImageFile;
-                    displayImage.onclick = null;
-                            
-                    }
-                }
-
-        function openLink(url) {
-        window.open(url, "_self");
-    }
-    </script>
 
 <!--WEEK 6-->
-<img id="Week_6" src="Images/WK6_Icon.PNG" height="160" onclick="playSound('ripping', changeImage('Week_6'))" ondblclick="openLink('Interactive Media Project (Page 7).html')">
+<img id="Week_6" src="Images/WK6_Icon.PNG" height="160" onclick="playSound('ripping'), changeImage('Week_6', 'Images/WK6_Icon_Broken.PNG')" ondblclick="openLink('Interactive Media Project (Page 7).html')">
 
 <audio id="ripping">
     <source src="Images/SFX_Ripping.mp3" type="audio/mp3">
     Your browser does not support the audio element.
 </audio>
 
-    <script> 
 
-function playSound(soundFile, action)  {
-        var clickSound = document.getElementById(soundFile);
-            clickSound.play();
-            if (typeof action === 'function') {
-                action('Week_6');
-            }
-        }
-
-        function changeImage(imageFile, brokenImageFile){
-            var brokenImageFile = 'Images/WK6_Icon_Broken.PNG'
-                let displayImage = document.getElementById(imageFile);
-                    if(displayImage.src.match(imageFile)){
-                    displayImage.src = brokenImageFile;
-                    displayImage.onclick = null;
-                            
-                    }
-                }
-
-        function openLink(url) {
-        window.open(url, "_self");
-    }
-    </script>
 
 <!--WEEK 7 (RESEARCH JOURNAL)-->
-<img id="Week_7" src="Images/WK7_Icon.PNG" height="110" onclick="playSound('ripping', changeImage('Week_7', 'Images/WK7_Icon_Broken.PNG'))" ondblclick="openLink('Interactive Media Project (Page 8).html')">
+<img id="Week_7" src="Images/WK7_Icon.PNG" height="110" onclick="playSound('ripping'), changeImage('Week_7', 'Images/WK7_Icon_Broken.PNG')" ondblclick="openLink('Interactive Media Project (Page 8).html')">
 
 <audio id="ripping">
     <source src="Images/SFX_Ripping.mp3" type="audio/mp3">
     Your browser does not support the audio element.
 </audio>
 
-    <script> 
 
-function playSound(soundFile, action)  {
+<script> 
+    function playSound(soundFile, imageFile, brokenImageFile) {
         var clickSound = document.getElementById(soundFile);
-            clickSound.play();
-            if (typeof action === 'function') {
-                action('Week_7, brokenImageFile');
-            }
+        let displayImage = document.getElementById(imageFile);
+        if (displayImage.src.includes(imageFile)) {
+            displayImage.src = brokenImageFile;
+            displayImage.onclick = null;
         }
+    }
 
-        function changeImage(imageFile, brokenImageFile){
-                let displayImage = document.getElementById(imageFile);
-                    if(displayImage.src.match(imageFile)){
-                    displayImage.src = brokenImageFile;
-                    displayImage.onclick = null;
-                            
-                    }
-                }
-
-        function openLink(url) {
+    function openLink(url) {
         window.open(url, "_self");
     }
-    </script>
+</script>
+
 </div>
 
 <div>
@@ -322,6 +174,7 @@ function playSound(soundFile, action)  {
             clickSound.play();
             }
     </script>
+    
         
     </div>
 </div>
