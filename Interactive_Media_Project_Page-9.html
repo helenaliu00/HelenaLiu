@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Interactive Media Project</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+
+    <!--External Font Families-->
+    <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&family=Rampart+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/kln5fyu.css">
+
+    </head>
+  
+    <body>
+        
+    <!--UI-->
+
+    <div class="menu-container">
+        <div class="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul class="menu-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Interactive_Media_Project_Page-2.html">Week 1</a></li>
+            <li><a href="Interactive_Media_Project_Page-3.html">Week 2</a></li>
+            <li><a href="Interactive_Media_Project_Page-4.html">Week 3</a></li>
+            <li><a href="Interactive_Media_Project_Page-5.html">Week 4</a></li>
+            <li><a href="Interactive_Media_Project_Page-6.html">Week 5</a></li>
+            <li><a href="Interactive_Media_Project_Page-7.html">Week 6</a></li>
+            <li><a href="Interactive_Media_Project_Page-8.html">Week 7</a></li>
+            <li><a href="Interactive_Media_Project_Page-9.html">Week 8</a></li>
+            <li><a href="Interactive_Media_Project_Page-10.html">Week 9</a></li>
+            <li><a href="Interactive_Media_Project_JOURNAL.html">Research Journal</a></li>
+        </ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('.menu-icon').click(function() {
+            $(this).toggleClass('active');
+        });
+    });
+</script>
+
+    <!--Title-->
+
+    <div class="catcontainer">
+        <div class="circle">
+            <a href="#" onclick="playSound(); return false;">
+                <img id="weekcat" src="Images/Cat_Element.PNG" height="100" title="meeoowww">
+            </a>
+        </div>
+        <audio id="clickSound">
+            <source src="Images/SFX_Cat_Meow.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    <script>
+        function playSound() {
+            var clickSound = document.getElementById("clickSound");
+            clickSound.play();
+        }
+    </script>
+
+        <a href="index.html" target=_self>
+            <h1 class="centeredtitle">Interactive Media</h1> </a>
+
+            <br>
+            <br>
+
+    <!--Body-->
+
+
+    <div class="container">
+        <div class="centered-column">
+            
+            <h3 id="weeknumberheading">Week Eight</h3>
+            <br>
+            <p> <h3>Wot is Physical Computing?</h3> </p>
+            <p>Physical computing refers to the use of tangible, embedded microcontroller-based interactive systems that can sense the world around them and/or control outputs such as lights, displays and motors.
+            This week began with an introductory slideshow lecture, notes found at the bottom of the page. 
+            For the first exercise, we were asked to replicate the "fish playground". Unfortunately, I had completely forgotten to take a picture of the finished product. 
+            This is particularly disappointing, as we had genuinely gotten the setup working! Seen below is the original TinkerCAD reference.</p>
+
+            <img src="Images/Image_15.png" height="400" title="TinkerCAD Example"></a>
+
+            <p> <h3>Speculative Objects</h3> </p>
+            <p>The activities for building a physical paper protoype were sadly cut out of this shorter lesson. However, we did get around to attempting the second Arduino example, working with LED lights in a matrix.
+                The only issue was that due to the excessive amount of regular and grounding wires, the breadboard quickly became very messy and fiddly to work with. 
+                Due to this, we were unable to get the LED lights to work. </p>
+            </p>
+
+            <img src="Images/Image_9.jpg" height="400" title="Arduino Exercise with Matrix LEDs (Angle 1)"></a>
+            <img src="Images/Image_10.jpg" height="400" title="Arduino Exercise with Matrix LEDs (Angle 2)"></a>
+            <img src="Images/Image_16.png" height="400" title="PDF Example"></a>
+
+            <p> <h3>Other General Note-Taking</h3> </p>
+            <p>Research Journal:</p>
+            <ul>
+            <li>link to image, caption, body text, tags, url, title </li>
+            <li>you have control over the css</li>
+            <li>out character for Helvetica to avoid curly Rs</li>
+            <li>"comma separated values spreadsheet" for exporting excel, photos are links in spreadsheet, local</li>
+            <li>excel, "freeze" the top line to keep it as category labels</li>
+            <li>data, sort, then import it to html</li>
+            <li>ctrl P to create PDF for submission</li>
+            <li>make sure to include appendix, the template uses content management system: papa parse - CSV - breaks into columns and rows, reads javascript</li>
+            <li>make sure to reference weeks 1-10 in waypost theme </li> </ul>
+
+            <p>Project 2C</p>
+            <ul></ul><li>doesnt necessarily have to have electronics/ physical output</li>
+            <li>basically just create interactivity somehow</li>
+            <li>please show a prototype tho. </li>
+            <li>what, why & how - (PITCH next week)</li>
+            <li>put in precedents for your project (a.k.a. inspirations)</li>
+            <li>Week 10 is in SOUTHBANK, MAKE PITCH!!</li>
+            <li>Submissions will still be individual even if we work in pairs, show your take on what you contributed</li></ul>
+                
+            <p>Arduino</p>
+            <ul><li>Breaking down components</li>
+            <li>Physical computing: involves interactive systems that can sense and respond to the world around them.</li>
+            <li>Components: transfer and presentation and expenditure of energy, e.g. sound or light into "current" - sensor networks iot & arduino</li>
+            <li>EasyMFRC522 Library - Labelled data on the class Arduino IDE </li>
+            <li>The board, ground = where the + charge turns to -</li>
+            <li>Neutralising the charge </li>
+            <li>Make sure you're using Arduino <i>UNO</i></li></ul>
+                
+            </ul>
+
+            <br>
+            <br>
+
+            <p><h3>Personal Notes & Takeaways:</h3></p>
+            <ul>
+                <li>How did I feel about this? Well, I think that it's really interesting and very fun, but I can already predict that I will begin to struggle when more wires are added.</li>
+                <li>This week's project was worked on with Mario.</li>
+                <li>This week's regular class had landed on public holiday (ANZAC DAY), so a make-up class had been scheduled for Tuesday and Wednesday afternoon. 
+                    I attended the Wednesday afternoon session, but was late due to Typography class in the morning. Missed out on the first half hour explaining the Research Journal.</li>
+            </ul>
+            <br>
+            <br>
+
+            
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <a href="Interactive_Media_Project_Page-8.html">
+        <button class="lbtn">< Last Week</button> </a>
+
+    <a href="Interactive_Media_Project_Page-10.html">
+        <button class="rbtn">Next Week ></button> </a>
+
+        <br>
+        <br>       
+        <br>
+        <br>
+        <br>
+
+    </body>
+    </html>   

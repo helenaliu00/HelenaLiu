@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Interactive Media Project</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+
+    <!--External Font Families-->
+    <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&family=Rampart+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/kln5fyu.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style>
+     * {
+        margin: 0;
+        padding: 0;
+        border: none;
+        }
+        @font-face { 
+    font-family: 'helv'; 
+    src: url('HelveticaNowDisplay.otf');
+    } 
+    @font-face {
+        font-family: 'helvAlt';
+        font-feature-settings: "aalt"; 
+        src: url('HelveticaNowDisplay.otf');
+        font-feature-settings: "ss04";
+        unicode-range: U+0052,U+0052 ;}
+    .cover {
+        page: cover;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url('https://source.unsplash.com/random/1600x900') no-repeat center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+        body {
+            /* display: flex; */
+            height: 100vh;
+            font-weight: 100;
+            font-family: helv, helvAlt, Arial, sans-serif;
+            font-size:14px;
+            font-feature-settings: "ss04";
+            font-weight: lighter;
+        }
+
+        section {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+        }
+
+        .parent,
+        .right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            align-items: center;
+            /* padding: 20px; */
+            /* this can add a frame*/
+            box-sizing: border-box;
+            max-width: 50%;
+            /* border: rgb(24, 185, 64) 1px solid; */
+        }
+
+        .parent {
+            position: relative;
+        }
+
+        .left, .topdiv, .bottomdiv {
+            background: url('https://source.unsplash.com/random/800x601') no-repeat center center;
+            background-size: cover;
+            /* border: blue 1px dashed; */
+            width: 100%;
+            height: 100vh;
+            /* adjust as needed */
+        }
+        .topdiv, .bottomdiv {
+            height: 50vh;
+            width:100%
+        }
+
+        .leftDoubleImage {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .leftDoubleImage img {
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            /* border: blue 1px solid; */
+            width:auto;
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 4em;
+            /* adjust as needed */
+            left: 2em;
+            width:calc(100% - 4em - 1em); 
+            /* adjust as needed */
+            color: black;
+            /* adjust as needed */
+            font-size: 1em;
+            line-height: 1.0em;
+            /* adjust as needed */
+            background-color: white;
+            padding: 2px 5px;
+        }
+
+        .right {
+            /* background: #f0f0f0; */
+            /* border: rgb(221, 148, 39) 1px solid; */
+            padding: 3em;
+        }
+
+        h1 {
+            font-size: 6em;
+            line-height:0.9em;
+            font-weight: lighter;
+            text-transform: uppercase;
+            text-align: left;
+            margin-bottom: 20px;
+            width: 100%
+        }
+        h2 {
+            text-align:left;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 1em;
+            width: 100%;
+        }
+        h2::before{
+            content: "{";
+            line-height: 2em;
+        }
+        h2::after{
+            content: "}";
+        }
+        p {
+        font-family:Arial, Helvetica, sans-serif;
+        margin-bottom: 20px;
+        background-color: white;
+        padding: 10px;
+        }
+        
+
+        a {
+            color: #333;
+            text-decoration: none;
+            font-size: 0.8em;
+            width:100%;
+            text-align: left;
+        }
+        em{
+            font-size: inherit;
+            line-height: 3em;
+            width: 100%;
+        }
+        @media (max-width: 600px) {
+            *{            
+            margin: 0;
+            padding: 0;
+            border: none;}
+            body {
+                flex-direction: column;
+            }
+        }
+
+    @media print {
+        @page {
+            size: A4 landscape;
+            margin:1cm;
+            /* marks: crop cross;
+            bleed: 5mm; */
+            @bottom-center {
+    content: counter(page);
+  }
+         }
+         @page cover {
+  margin: 0; /* Use a full size page */
+
+  /* Remove page numbers for the cover */
+  @bottom-center {
+    content: none;
+  }
+}
+        @page :left {
+            margin-left: 1cm;
+        }
+        
+        @page :right {
+            margin-right: 1cm;
+        }
+        body {
+        width: 297mm;
+        height: 210mm;
+        margin: 0;
+        padding: 0;
+        page-break-after: always;  
+        font-size: 10pt;}
+        em {
+        text-align: left;
+        }
+        section {
+            min-height: calc(100% - 2cm);
+            height: 100vh;
+            display: flex;
+            page-break-inside: avoid;
+            page-break-after: always !important;
+        }
+        h1 {
+        font-size: 5em;
+        line-height: 0.8em;
+        }
+        h2 {
+        font-size: 1.5em;
+        }
+        div {
+        /* max-width:50%; */
+        }
+        p {
+        font-size: 0.8em;
+        }
+        em{
+            font-size: 10pt;
+            line-height: 3em;
+            width: 100%;
+        }
+    }
+    
+    </style>
+</head>
+
+<body> 
+    <script>
+        /* THIS SCRIPT IS LOADED VIA CDN AND ESSENTIALLY READS THE .csv FILE ROW BY ROW 
+        TO GET THE VARIOUS `COMPONENTS` OF YOUR `JOURNAL` ONE `ENTRY` PER SECTION */
+        $(document).ready(function () {
+            Papa.parse('ResearchJournal.csv', {
+                download: true,
+                header: true,
+                complete: function (results) {
+                    results.data.forEach(function (row) {
+                        var section = $('<section>');
+                        var parentDiv = $('<div>').addClass('parent');
+                        var leftDiv = $('<div>').addClass(row['Class']);
+                        var topdiv = $('<div>').addClass('topdiv').css('background-image', 'url(' + row['ImageSrc'] + ')');
+                        var bottomdiv = $('<div>').addClass('bottomdiv').css('background-image', 'url(' + row['ImageSrc2'] + ')');
+                        var rightDiv = $('<div>').addClass('right');
+                        
+                        var h1 = $('<h1>').text(row['Title']);
+                        var h2 = $('<h2>').text(row['Description']);
+                        var p = $('<p>').text(row['BodyText']);
+                        var a = $('<a>').attr('href', '#').text(row['Link']);
+                        //var figure = $('<figure>');
+                        var img = $('<img>').attr('src', row['ImageSrc']);
+                        var img2 = $('<img>').attr('src', row['ImageSrc2']);
+                        //var figcaption = $('<figcaption>').text(row['Caption'].'\n'.$row['Caption2']);
+                        //figure.append(img, figcaption);
+                        if (row['Class'] == 'leftDoubleImage') {
+                            leftDiv.append(topdiv, bottomdiv);
+                            var captionText = 'Image: '+ row['Caption'] + ' | Year: ' + row['Caption2'];
+                            var captionDiv = $('<div>').addClass('caption').text(captionText);
+                        } else {
+                            leftDiv.css('background-image', 'url(' + row['ImageSrc'] + ')');
+                            leftDiv.css('background-size', 'cover');
+                            var captionDiv = $('<div>').addClass('caption').text(row['Caption']);
+                        }
+                        parentDiv.append(leftDiv, captionDiv);
+                        rightDiv.append(h1);
+                        var keyWords = row['Keywords'].split(', ');
+                        var span = '<p style="width:100%; line-height:2em;">';
+                        keyWords.forEach((keyword) => {
+                            span+='#' + keyword + '&nbsp;';
+                        });
+                        span+='</p>';
+                        rightDiv.append(h2, p, a, span);
+                        section.append(parentDiv, rightDiv);
+                        $('body').append(section);
+                    });
+                }
+            });
+        });
+    </script>
+     <!-- YOU CAN `UNCOMMENT` THIS SECTION AND EDIT IT TO TEST ANY STRUCTURAL OR STYLE CHANGES YOU MIGHT WANT TO MAKE
+        YOU COULD ALSO COPY A NUMBER OF THESE SECTIONS IF YOU PREFER TO WORK WITH A STATIC TEMPLATE, JUST CHANGE TH EIMAGES AND TEXTS MANUALLY. -->
+    <!-- 
+    <section>
+        <div class="parent">
+            <div class="left"></div>
+            <div class="caption">Your caption goes here, with <span class="caption_title">A Title, </span>Author, &
+                <span class="caption_url">url</span></div>
+        </div>
+        <div class="right">
+            <h1>Header</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc at bibendum dapibus, risus
+                ante dapibus est, a feugiat turpis elit id eros.</p>
+            <a href="#">Read more</a>
+        </div>
+    </section> -->
+
+    <br>
+<br>
+<br>
+
+<a href="Interactive_Media_Project_Page-10.html">
+    <button class="lbtn">< Week 9</button> </a>
+
+<a href="index.html">
+    <button class="rbtn">Home ></button> </a>
+<br>
+<br>       
+<br>
+<br>
+<br>
+
+</body>
+
+</html>
