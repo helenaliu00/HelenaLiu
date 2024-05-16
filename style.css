@@ -124,6 +124,135 @@ li  {color: black;
 
 /*position image elements*/
 
+#yarn {
+    background-image: url("Images/WK1_Icon.PNG");
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+}
+#yarn:hover {
+    background-image: url("Images/WK1_Icon_Broken.PNG")
+}
+
+#glass {
+    background-image: url("Images/WK2_Icon.PNG");
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+}
+#glass:hover {
+    background-image: url("Images/WK2_Icon_Broken.PNG");
+    width: 120px;
+    height: 120px;
+}
+
+#cup {
+    background-image: url("Images/WK3_Icon.PNG");
+    background-size: cover;
+    width: 110px;
+    height: 100px;
+}
+#cup:hover {
+    background-image: url("Images/WK3_Icon_Broken.PNG");
+    width: 110px;
+    height: 100px;
+}
+
+#plant {
+    background-image: url("Images/WK4_Icon.PNG");
+    background-size: cover;
+    width: 70px;
+    height: 120px;
+    position: relative;
+    bottom: 3vh;
+}
+#plant:hover {
+    background-image: url("Images/WK4_Icon_Broken.PNG");
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 1vh;
+}
+
+#bowl {
+    background-image: url("Images/WK5_Icon.PNG");
+    background-size: cover;
+    width: 120px;
+    height: 120px;
+}
+#bowl:hover {
+    background-image: url("Images/WK5_Icon_Broken.PNG");
+    width: 120px;
+    height: 120px;
+}
+
+#mouse {
+    background-image: url("Images/WK6_Icon.PNG");
+    background-size: cover;
+    width: 130px;
+    height: 130px;
+}
+#mouse:hover {
+    background-image: url("Images/WK6_Icon_Broken.PNG");
+    width: 120px;
+    height: 120px;
+}
+
+#lamp {
+    background-image: url("Images/WK7_Icon.PNG");
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+}
+#lamp:hover {
+    background-image: url("Images/WK7_Icon_Broken.PNG");
+    width: 100px;
+    height: 100px;
+}
+
+#picture {
+    background-image: url("Images/WK8_Icon.PNG");
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 180px;
+    left: 35vw;
+    z-index: 51;
+}
+#picture:hover {
+    background-image: url("Images/WK8_Icon_Broken.PNG");
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 180px;
+    left: 35vw;
+    z-index: 51;
+}
+
+#calendar {
+    background-image: url("Images/WK9_Icon.PNG");
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 150px;
+    left: 55vw;
+    z-index: 50;
+}
+#calendar:hover {
+    background-image: url("Images/WK9_Icon_Broken.PNG");
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 150px;
+    left: 55vw;
+    z-index: 50;
+}
+
+
+
+
 .titlecontainer {
     position: relative;
     top: 10vh;
@@ -153,19 +282,6 @@ top: 230px;
 right: 0px;
 z-index: 20}
 
-#Week_8 {display: flex;
-    justify-content: space-between; 
-position: absolute;
-top: 180px;
-left: 35vw;
-z-index: 51;}
-
-#Week_9 {display: flex;
-    justify-content: space-between; 
-position: absolute;
-top: 150px;
-left: 55vw;
-z-index: 50;}
 
 .image-row {
     display: flex;
@@ -196,13 +312,6 @@ z-index: 1;}
     top: 10vh;
     left: 20vh;
     font-size: 12px;
-    transform: translate(-50%, -50%);
-  }
-
-.custom-positioned-text-3 {
-    position: absolute;
-    top: 75vh;
-    left: 45vw;
     transform: translate(-50%, -50%);
   }
 
